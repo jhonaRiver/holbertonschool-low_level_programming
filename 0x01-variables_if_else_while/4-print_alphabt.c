@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-/*
- * Prints the alphabet in lowercase except the letters q and e.
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
+
 
 int main(void)
 {
