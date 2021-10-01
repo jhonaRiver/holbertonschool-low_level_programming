@@ -7,6 +7,7 @@
 int main(void)
 {
 	char lowAlpha = 'a';
+
 	while (lowAlpha <= 'z')
 	{
 		putchar(lowAlpha);
