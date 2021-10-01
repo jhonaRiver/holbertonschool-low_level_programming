@@ -8,10 +8,6 @@
  * Return: Always 0 (Success)
  */
 
-/**
- * Prints whether a random number is positive or negative.
- */
-
 int main(void)
 {
 	int n;
