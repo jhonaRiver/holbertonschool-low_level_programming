@@ -3,14 +3,15 @@
 #include <stdio.h>
 
 /**
- * Prints whether a random number is positive or negative.
- */
-
-/**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
+/**
+ * Prints whether a random number is positive or negative.
+ */
+
 int main(void)
 {
 	int n;
