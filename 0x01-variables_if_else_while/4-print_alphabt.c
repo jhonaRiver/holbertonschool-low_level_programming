@@ -7,6 +7,7 @@
 int main(void)
 {
 	char lowerAlpha = 'a';
+
 	while (lowerAlpha <= 'z')
 	{
 		if(lowerAlpha != 'e' && lowerAlpha != 'q')
