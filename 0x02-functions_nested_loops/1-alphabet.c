@@ -1,4 +1,4 @@
-void print_alphabet(void);
+#include "main.h"
 
 /**
  * print_alphabet - Prints the alphabet in lowercase

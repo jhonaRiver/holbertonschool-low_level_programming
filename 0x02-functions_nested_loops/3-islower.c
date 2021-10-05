@@ -1,4 +1,4 @@
-int _islower(int c);
+#include "main.h"
 
 /**
  * _islower - Checks for a lowercase character
