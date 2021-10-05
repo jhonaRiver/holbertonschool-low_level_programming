@@ -20,7 +20,6 @@ int _isalpha(int c)
 			if (c == lower || c == upper)
 			{
 				alpha = 1;
-				break;
 			}
 			upper++;
 		}
