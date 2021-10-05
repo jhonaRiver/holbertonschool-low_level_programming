@@ -10,15 +10,25 @@
 
 int _isalpha(int c)
 {
-	int alpha;
+	int alpha = 0;
+	char lower = 'a', upper = 'A';
 
-	if (c >= 65 || c <= 90 || c >= 97 || c <= 122)
+	while (lower <= 'z')
 	{
-		alpha = 1;
-	}
-	else
-	{
-		alpha = 0;
+		while (upper <= 'Z')
+		{
+			if (c == lower || c == upper)
+			{
+				alpha = 1;
+				break;
+			}
+			upper++;
+		}
+		if (alpha == 1)
+		{
+			break;
+		}
+		lower++;
 	}
 	return (alpha);
 }
