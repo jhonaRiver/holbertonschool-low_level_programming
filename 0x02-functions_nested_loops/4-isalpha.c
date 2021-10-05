@@ -11,19 +11,17 @@
 int _isalpha(int c)
 {
 	int alpha = 0;
-	char lower = 'a', upper = 'A';
+	char lower, upper;
 
-	while (lower <= 'z')
+	for (lower = 'a'; lower <= 'z'; lower++)
 	{
-		while (upper <= 'Z')
+		for (upper = 'A'; upper <= 'Z'; upper++)
 		{
 			if (c == lower || c == upper)
 			{
 				alpha = 1;
 			}
-			upper++;
 		}
-		lower++;
 	}
 	return (alpha);
 }
