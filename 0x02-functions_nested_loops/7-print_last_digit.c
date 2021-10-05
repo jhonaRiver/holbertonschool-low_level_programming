@@ -12,7 +12,14 @@ int print_last_digit(int num)
 {
 	int lastDigit;
 
-	lastDigit = num % 10;
-	_putchar(lastDigit);
+	if (num < 0)
+	{
+		lastDigit = -1 * (num % 10);
+	}
+	else
+	{
+		lastDigit = num % 10;
+	}
+	_putchar(lastDigit + '0');
 	return (lastDigit);
 }
