@@ -10,7 +10,7 @@ int _islower(int c)
 {
 	int lower;
 
-	if (c >= 65 || c <= 90)
+	if (c <= 65 || c >= 90)
 	{
 		lower = 0;
 	}
