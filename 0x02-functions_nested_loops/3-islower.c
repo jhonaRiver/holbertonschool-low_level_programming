@@ -8,15 +8,17 @@
 
 int _islower(int c)
 {
-	int lower;
+	int lower = 0;
+	char i = 'a';
 
-	if (c <= 65 || c >= 90)
+	while (i <= 'z')
 	{
-		lower = 0;
-	}
-	else
-	{
-		lower = 1;
+		if (i == c)
+		{
+			lower = 1;
+			break;
+		}
+		i++;
 	}
 	return (lower);
 }
