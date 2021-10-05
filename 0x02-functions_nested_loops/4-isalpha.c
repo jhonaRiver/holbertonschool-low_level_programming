@@ -24,10 +24,6 @@ int _isalpha(int c)
 			}
 			upper++;
 		}
-		if (alpha == 1)
-		{
-			break;
-		}
 		lower++;
 	}
 	return (alpha);
