@@ -2,10 +2,8 @@ int _islower(int c);
 
 /**
  * _islower - Checks for a lowercase character
- *
- * c - input character given to check if it's lowercase
- *
- * Return - lower is 1 if c is lowercase or 0 otherwise
+ * @c: input character given to check if it's lowercase
+ * Return: lower is 1 if c is lowercase or 0 otherwise
  */
 
 int _islower(int c)
