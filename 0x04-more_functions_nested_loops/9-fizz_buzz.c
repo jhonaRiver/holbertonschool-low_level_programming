@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - Prints numbers from 1 to 100 and replaces the multiples of 3 with
