@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - Prints numbers from 1 to 100 and replaces the multiples of 3 with
@@ -13,23 +12,23 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("Fizz ");
+			printf("FizzBuzz ");
 		}
 		else if (i % 5 == 0)
 		{
 			printf("Buzz ");
 		}
-		else if (i % 3 == 0 && i % 5 == 0)
+		else if (i % 3 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("Fizz ");
 		}
 		else
 		{
-			printf("%d", i);
+			printf("%d ", i);
 		}
 	}
-	printf("Buzz\n");
+	printf("\n");
 	return (0);
 }
