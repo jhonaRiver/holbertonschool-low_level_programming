@@ -3,6 +3,15 @@
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
+int main(void)
+{
+    dog_t *my_dog;
+
+    my_dog = new_dog("Poppy", 3.5, "Bob");
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+    return (0);
+}
+
 /**
  * new_dog - Creates a new dog
  * @name: name of the dog
@@ -13,12 +22,11 @@ char *_strcpy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog;
-	int name_l = 0, own_l = 0;
+	int name_l = 0;
 
 	if (name != NULL && owner != NULL)
 	{
 		name_l = _strlen(name) + 1;
-		own_l = _strlen(owner) + 1;
 		newDog = malloc(sizeof(dog_t));
 		if (newDog == NULL)
 		return (NULL);
