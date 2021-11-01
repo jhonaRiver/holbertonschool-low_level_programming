@@ -4,7 +4,7 @@ char *_strcpy(char *dest, char *src);
 
 int main(void)
 {
-    dog_t *my_dog;
+    struct dog *my_dog;
 
     my_dog = new_dog("Poppy", 3.5, "Bob");
     printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
@@ -18,19 +18,16 @@ int main(void)
  * @owner: owner of the dog
  * Return: dog structure
  */
-dog_t *new_dog(char *name, float age, char *owner)
+struct dog *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog;
+	struct dog *newDog;
 
-	if (name != NULL && owner != NULL)
-	{
-		newDog = malloc(sizeof(dog_t));
-		if (newDog == NULL)
-			return (NULL);
-		newDog->name = _strcpy(newDog->name, name);
-		newDog->owner = _strcpy(newDog->owner, owner);
-		newDog->age = age;
-	}
+	newDog = malloc(sizeof(struct dog));
+	if (newDog == NULL)
+		return (NULL);
+	newDog->name = _strcpy(newDog->name, name);
+	newDog->owner = _strcpy(newDog->owner, owner);
+	newDog->age = age;
 	return (newDog);
 }
 
