@@ -1,42 +1,80 @@
 #include "dog.h"
 
+int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
-int main(void)
+/**
+  * new_dog - ...
+  * @name: ...
+  * @age: ...
+  * @owner: ...
+  *
+  * Return: ...
+  */
+dog_t *new_dog(char *name, float age, char *owner)
 {
-    struct dog *my_dog;
+	dog_t *cutie_dog;
+	int name_l = 0, own_l = 0;
 
-    my_dog = new_dog("Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
-    return (0);
+	if (name != NULL && owner != NULL)
+	{
+		name_l = _strlen(name) + 1;
+		own_l = _strlen(owner) + 1;
+		cutie_dog = malloc(sizeof(dog_t));
+
+		if (cutie_dog == NULL)
+			return (NULL);
+
+		cutie_dog->name = malloc(sizeof(char) * name_l);
+
+		if (cutie_dog->name == NULL)
+		{
+			free(cutie_dog);
+			return (NULL);
+		}
+
+		cutie_dog->owner = malloc(sizeof(char) * own_l);
+
+		if (cutie_dog->owner == NULL)
+		{
+			free(cutie_dog->name);
+			free(cutie_dog);
+			return (NULL);
+		}
+
+		cutie_dog->name = _strcpy(cutie_dog->name, name);
+		cutie_dog->owner = _strcpy(cutie_dog->owner, owner);
+		cutie_dog->age = age;
+	}
+
+	return (cutie_dog);
 }
 
 /**
- * new_dog - Creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
- * Return: dog structure
- */
-struct dog *new_dog(char *name, float age, char *owner)
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
+int _strlen(char *s)
 {
-	struct dog *newDog;
+	int c = 0;
 
-	newDog = malloc(sizeof(struct dog));
-	if (newDog == NULL)
-		return (NULL);
-	newDog->name = _strcpy(newDog->name, name);
-	newDog->owner = _strcpy(newDog->owner, owner);
-	newDog->age = age;
-	return (newDog);
+	for (; *s != '\0'; s++)
+	{
+		c++;
+	}
+
+	return (c);
 }
 
 /**
- * _strcpy - Copy a string
- * @dest: Destination
- * @src: Source
- * Return: Pointer to dest
- */
+  * _strcpy - Copy a string
+  * @dest: Destination value
+  * @src: Source value
+  *
+  * Return: the pointer to dest
+  */
 char *_strcpy(char *dest, char *src)
 {
 	int i;
@@ -45,6 +83,8 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[i] = src[i];
 	}
+
 	dest[i++] = '\0';
+
 	return (dest);
 }
