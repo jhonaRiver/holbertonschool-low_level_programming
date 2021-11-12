@@ -18,8 +18,26 @@ list_t *add_node(list_t **head, const char *str)
 			return (NULL);
 		}
 		temp->str = strdup(str);
+		temp->len = _strlen(str);
 		temp->next = *head;
 		*head = temp;
 	}
 	return (0);
+}
+
+/**
+ * _strlen - length of a string
+ * @s: string to count
+ * Return: s length
+ */
+int _strlen(const char *s)
+{
+	int c = 0;
+
+	while (*s)
+	{
+		s++;
+		c++;
+	}
+	return (c);
 }
