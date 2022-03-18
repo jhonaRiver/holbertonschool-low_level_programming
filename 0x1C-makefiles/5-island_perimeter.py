@@ -4,27 +4,21 @@ Module Island perimeter
 """
 
 
-class Solution(object):
-    def islandPerimeter(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
-        count, repeat = 0, 0
-
-        for i in range(len(grid)):
-            for j in range(len(grid[i])):
-                if grid[i][j] == 1:
-                    count += 1
-                    if i != 0 and grid[i - 1][j] == 1:
-                        repeat += 1
-                    if j != 0 and grid[i][j - 1] == 1:
-                        repeat += 1
-
-        return 4*count - 2*repeat
-
-# Since there are no lakes, every pair of neighbour cells with different values is part of the perimeter
-# (more precisely, the edge between them is). So just count the differing pairs, both horizontally and vertically
-# (for the latter I simply transpose the grid).
-    def islandPerimeter2(self, grid):
-        return sum(sum(map([0] + row, row + [0])) for row in grid + map(list, zip(*grid)))
+def island_perimeter(grid):
+    """
+    Returns island perimeter
+    """
+    row_num = len(grid)
+    if row_num == 0 or len(grid[0]) == 0:
+        return 0
+    islands, overlaps = 0, 0
+    col_num = len(grid[0])
+    for i in range(row_num):
+        for j in range(col_num):
+            if (grid[i][j] == 1):
+                islands += 1
+                if (i < row_num - 1 and grid[i + 1][j] == 1):
+                    overlaps += 1
+                if (j < col_num - 1 and grid[i][j + 1] == 1):
+                    overlaps += 1
+    return islands * 4 - overlaps * 2
