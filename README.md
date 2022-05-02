@@ -2,7 +2,6 @@
 In this repository you will find the projects related to low-level programming that I had to do in Holberton.
 
 ## Projects
-Here is the list of all the projects, each one has its description in its respective folder.
 
 * [0x00. C - Hello, World](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x00-hello_world)
 * [0x01. C - Variables, if, else, while](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x01-variables_if_else_while)
@@ -16,3 +15,15 @@ Here is the list of all the projects, each one has its description in its respec
 * [0x0A. C - argc, argv](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x0A-argc_argv)
 * [0x0B. C - malloc, free](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x0B-malloc_free)
 * [0x0C. C - More malloc, free](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x0C-more_malloc_free)
+* [0x0D. C - Preprocessor](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x0D-preprocessor)
+* [0x0E. C - Structures, typedef](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x0E-structures_typedef)
+* [0x0F. C - Function pointers](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x0F-function_pointers)
+* [0x10. C - Variadic functions](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x10-variadic_functions)
+* [0x12. C - Singly linked lists](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x12-singly_linked_lists)
+* [0x13. C - More singly linked lists](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x13-more_singly_linked_lists)
+* [0x14. C - Bit manipulation](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x14-bit_manipulation)
+* [0x15. C - File I/O](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x15-file_io)
+* [0x17. C - Doubly linked lists](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x17-doubly_linked_lists)
+* [0x18. C - Dynamic libraries](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x18-dynamic_libraries)
+* [0x1A. C - Hash tables](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables)
+* [0x1C. C - Makefiles](https://github.com/jhonaRiver/holbertonschool-low_level_programming/tree/master/0x1C-makefiles)
